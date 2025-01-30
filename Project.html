@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="Project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <title>Project</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Izzatulfthah</a>
+
+        <nav>
+            <a href="index.html" class="active"> Home </a>
+            <a href="AboutMe.html"> About Me </a>
+            <a href="Project.html"> Project </a>
+            <a href="ContactMe.html"> Contact </a>
+        </nav>
+    </header>
+
+    <section>
+
+        <div style=" color: #ff0099; font-size: 80px; font-weight: bold; text-align: center; position: absolute;
+              top: 80px; width: 100%;">
+           MY PROJECT
+          </div>
+
+        <div style="background-color: black; height: 1000px; font-family: Fantasy; color: #ff0099; padding: 50px;">
+            <div style="font-size: 80px; font-weight: bold; text-align: center; position: absolute; top: 80px; width: 100%;">
+                <!-- Optional Title Area -->
+            </div>
+    
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; justify-items: center; margin-top: 150px; font-family: Palatino, serif; font-size: 25px; font-weight: bold; text-align: center;">
+                <!-- Card 1 -->
+                <div class="card" style="width: 500px; height: 300px; border-radius: 15px; background-image: url('img/Adobe/editing.jpg'); background-size: cover; background-position: center; display: flex; justify-content: center; align-items: center; transition: transform 0.3s, filter 0.3s;">
+                    <a href="adobe.html" class="card-link">Editing</a>
+                </div>
+    
+                <!-- Card 2 -->
+                <div class="card" style="width: 500px; height: 300px; border-radius: 15px; background-image: url('img/Tetrabit/1.jpg'); background-size: cover; background-position: center; display: flex; justify-content: center; align-items: center; transition: transform 0.3s, filter 0.3s;">
+                    <a href="Tetrabit.html" class="card-link">Tetrabit 25</a>
+                </div>
+    
+                <!-- Card 3 -->
+                <div class="card" style="width: 500px; height: 300px; border-radius: 15px; background-image: url('img/Socmed/instagramtiktok.jpg'); background-size: cover; background-position: center; display: flex; justify-content: center; align-items: center; transition: transform 0.3s, filter 0.3s;">
+                    <a href="SocialMedia.html" class="card-link"> Social Media Marketing</a>
+                </div>                
+    
+                <!-- Card 4 -->
+                <div class="card" style="width: 500px; height: 300px; border-radius: 15px; background-image: url('img/Maze/maze.jpg'); background-size: cover; background-position: center; display: flex; justify-content: center; align-items: center; transition: transform 0.3s, filter 0.3s;">
+                    <a href="MazeGaza.html" class="card-link">Maze Runner: Freedom Gaza</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+
+
+/* Hover effect for card */
+.card:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+    filter: brightness(80%); /* Darkens the image slightly */
+}
+
+.card:hover .card-link {
+    color: #fff; /* Change text color to white on hover */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add text shadow */
+}
+
+/* Card Link Styling */
+.card {
+    width: 500px;
+    height: 300px;
+    border-radius: 15px;
+    background-image: url('img/me11.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, filter 0.3s;
+    position: relative;
+    overflow: hidden; /* Ensure text does not overflow outside the card */
+}
+
+.card-link {
+    text-decoration: none;
+    color: #ff0099;
+    font-size: 30px; /* Adjust font size to fit the card */
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    line-height: 300px; /* Vertically center the text */
+    font-weight: 600;
+    white-space: normal; /* Allow text to wrap inside the container */
+    word-wrap: break-word; /* Ensure text wraps within the box */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional: Adding shadow for better visibility */
+    
+    /* Add background to the text */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px; /* Add some space around the text */
+    border-radius: 5px; /* Optional: Rounded corners for the background */
+}
+
+
+
+/* Card Link Styling on hover */
+.card-link:hover {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Grid Styling */
+section {
+    background-color: black;
+    padding: 50px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px; /* Adjusted gap between card boxes */
+    justify-items: center;
+    font-family: Palatino, serif;
+}
+
+/* Making it responsive */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+        gap: 20px; /* Adjusted gap for smaller screens */
+    }
+}
+</style>
+<!-- Footer -->
+<footer class="custom-footer">
+	<p>© 2025 All Rights Reserved. Design by Izzatul Fatihah</p>
+</footer>
+    
+    
+</body>
+</html>

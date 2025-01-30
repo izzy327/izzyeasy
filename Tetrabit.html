@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="Project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <title>Project</title>
+    <style>
+
+
+        /* Card Styling */
+        .card {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, filter 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    filter: brightness(80%);
+}
+
+.card-link {
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
+}
+
+.card:hover .card-link {
+    opacity: 1; /* Text becomes visible on hover */
+}
+
+        /* Body Styling */
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: left;
+            padding: 20px;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding-top: 150px;
+        }
+
+        /* Arrows Styling */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            font-size: 40px;
+            color: #ff0099;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            padding: 20px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .modal-content {
+    display: flex;
+    flex-wrap: wrap; /* Responsive layout for smaller screens */
+    justify-content: space-between;
+    align-items: center; /* Aligns items vertically */
+    background-color: #fefefe;
+    margin: 0 auto; /* Centered horizontally */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70vw; /* 70% of the viewport width */
+    height: 70vh; /* 70% of the viewport height */
+    border-radius: 15px;
+    gap: 20px; /* Space between image and description */
+    overflow: hidden; /* Prevents unwanted scrollbars */
+    box-sizing: border-box;
+}
+
+.modal-image {
+    flex: 1;
+    width: 100%; /* Fill container width */
+    height: 100%; /* Fill container height */
+    object-fit: cover; /* Makes the image fit the border */
+    border-radius: 10px;
+}
+
+.modal-video {
+    flex: 1;
+    width: 70%; /* Fill container width */
+    height: 100%; /* Fill container height */
+    object-fit: cover; /* Makes the image fit the border */
+    border-radius: 10px;
+}
+
+.modal-description {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    line-height: 1.5;
+    overflow-y: auto; /* Scrolling for long text */
+    height: 100%; /* Match the modal height */
+    box-sizing: border-box;
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="#" class="logo">Izzatulfthah</a>
+
+    <nav>
+        <a href="index.html" class="active"> Home </a>
+        <a href="AboutMe.html"> About Me </a>
+        <a href="Project.html"> Project </a>
+        <a href="ContactMe.html"> Contact </a>
+    </nav>
+</header>
+
+<section>
+    <div style="font-size: 50px; font-weight: bold; color: #ff0099; text-align: left; padding-left:115px; position: absolute; top: 80px; width: 100%;">Tetra-Bit 2025</div>
+
+    <div style="background-color: black; padding: 50px;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; justify-items: center; margin-top: 150px; font-family: Palatino, serif; font-size: 25px; font-weight: bold; text-align: center;">
+            
+            <!-- Card 1 -->
+            <div class="card" style="background-image: url('img/Tetrabit/crew.jpg');" onclick="openModal(0)">
+                <a href="#" class="card-link">Bureau VideoPhoto</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card" style="background-image: url('img/Tetrabit/tetra4.JPG');" onclick="openModal(1)">
+                <a href="#" class="card-link">Photo Tetra</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card" style="background-image: url('img/Tetrabit/3.JPG');" onclick="openModal(2)">
+                <a href="#" class="card-link">Photo Tetra</a>
+            </div>   
+
+            <!-- Card 4 -->
+            <div class="card" style="background-image: url('img/Tetrabit/4.JPG');" onclick="openModal(3)">
+                <a href="#" class="card-link">Photo Tetra</a>
+            </div>                  
+
+            <!-- Card 5 -->
+            <div class="card" style="background-image: url('img/Tetrabit/tetra9.jpg');" onclick="openModal(4)">
+                <a href="#" class="card-link">Video Tetra</a>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card" style="background-image: url('img/Tetrabit/tetra10.jpg');" onclick="openModal(5)">
+                <a href="#" class="card-link">Video Tetra</a>
+            </div>
+
+            <!-- Modal for Image and Description -->
+<div id="imageModal" class="modal">
+    <span class="prev arrow" onclick="moveSlide(-1)">&#10094;</span>
+    <div class="modal-content">
+        <!-- Image placeholder -->
+        <img id="modalImage" class="modal-image" src="" alt="Project Image" style="display:none;">
+        
+        <!-- Video placeholder -->
+        <video id="modalVideo" class="modal-video" controls style="display:none;">
+            <source id="videoSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div id="modalDescription" class="modal-description"></div>
+    </div>
+    <span class="next arrow" onclick="moveSlide(1)">&#10095;</span>
+</div>
+
+</section>
+
+<!-- Modal for Image and Description -->
+<div id="imageModal" class="modal">
+    <span class="prev arrow" onclick="moveSlide(-1)">&#10094;</span>
+    <div class="modal-content">
+        <img id="modalImage" class="modal-image" src="" alt="Project Image">
+        <div id="modalDescription" class="modal-description"></div>
+    </div>
+    <span class="next arrow" onclick="moveSlide(1)">&#10095;</span>
+</div>
+
+<script>
+    // Array of project data (image and description)
+    const projects = [
+    { 
+        image: 'img/Tetrabit/crew2.png', 
+        description: 'As the TetraBit25 Photo and Video Bureau leader, I guide my team in capturing the event’s best moments. I ensure high-quality visuals, manage workflows, and create engaging storytelling through photos and videos.' 
+    },
+    { 
+        image: 'img/Tetrabit/2.jpg', 
+        description: 'Crew and lecturers' 
+    },
+    { 
+        image: 'img/Tetrabit/tetra5.jpg', 
+        description: 'Captured at day 2 where the game beta testers also involved during the event.' 
+    },
+    { 
+        image: 'img/Tetrabit/tetra6.png', 
+        description: 'Photos captured at day 1 and day 2.' 
+    },
+    {
+        video: 'img/Tetrabit/tetrav1.mp4', 
+        description: 'Video for honoring sponsors.' 
+    },
+    { 
+        video: 'img/Tetrabit/tetrav2.mp4', 
+        description: 'Video rebranding MC111>MC112.' 
+    }
+];
+
+let currentIndex = 0;
+
+// Open modal and display the selected content (image or video)
+function openModal(index) {
+    currentIndex = index;
+    const project = projects[currentIndex];
+
+    // Check if it's an image or video and update the modal accordingly
+    if (project.image) {
+        document.getElementById("modalImage").style.display = "block";
+        document.getElementById("modalImage").src = project.image;
+        document.getElementById("modalVideo").style.display = "none";
+    } else if (project.video) {
+        document.getElementById("modalImage").style.display = "none";
+        document.getElementById("modalVideo").style.display = "block";
+        document.getElementById("modalVideo").src = project.video;
+    }
+
+    // Set the description
+    document.getElementById("modalDescription").textContent = project.description;
+    // Show the modal
+    document.getElementById("imageModal").style.display = "block";
+}
+
+// Navigate through the images/videos
+function moveSlide(direction) {
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = projects.length - 1;
+    if (currentIndex >= projects.length) currentIndex = 0;
+
+    const project = projects[currentIndex];
+
+    // Check if the current project has an image or video and update the modal accordingly
+    if (project.image) {
+        document.getElementById("modalImage").style.display = "block";
+        document.getElementById("modalImage").src = project.image;
+        document.getElementById("modalVideo").style.display = "none";
+    } else if (project.video) {
+        document.getElementById("modalImage").style.display = "none";
+        document.getElementById("modalVideo").style.display = "block";
+        document.getElementById("modalVideo").src = project.video;
+    }
+
+    // Update description
+    document.getElementById("modalDescription").textContent = project.description;
+}
+
+// Close the modal
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+    // Reset video to stop playing when the modal is closed
+    document.getElementById("modalVideo").pause();
+    document.getElementById("modalVideo").currentTime = 0;
+}
+
+// Close the modal if clicked outside the modal content
+window.onclick = function(event) {
+    if (event.target == document.getElementById("imageModal")) {
+        closeModal();
+    }
+};
+
+</script>
+
+</body>
+</html>

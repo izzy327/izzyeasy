@@ -1,0 +1,382 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	 <link rel="stylesheet" href= "portfolio.css">
+	 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+	 <title>Portfolio</title>
+</head>
+<body>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		text-decoration: none;
+		border: none;
+		outline: none;
+		font-family: 'Poppins', sans-serif;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+body{
+	width: 100%;
+	height: 100vh;
+	overflow-x: hidden;
+	background-color:black;
+	color:aliceblue;
+}
+
+header{
+	position: fixed;
+	top: 0px;
+	left: 0;
+	width: 100%;
+	padding: 1rem 9%;
+	background-color: black;
+	filter: drop-shadow(10px);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+
+.skills-left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center; /* Aligns items in a row */
+    justify-content: center; /* Centers the content horizontally */
+    gap: 10px; /* Space between image and stars */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skill-item img {
+    width: 50px; /* Adjusted size of images */
+    height: 50px; /* Keeps aspect ratio square */
+    object-fit: contain;
+}
+
+.stars {
+    font-size: 25px; /* Increased star size */
+    color: #000; /* Gold color for stars */
+    margin-left: 10px; /* Adds some space between the image and the stars */
+}
+
+.skill-item h4 {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+.logo{
+	font-size: 3rem;
+	color:#ff0dc2;
+	font-weight: 800;
+	cursor: pointer;
+	transition: 0.5s ease;
+    padding:5px;
+}
+
+.logo:hover{
+	transform: scale(1.1);
+}
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Keep the original color */
+}
+
+a h2 {
+    color: #ff0dc2; /* Default color */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+a:hover h2 {
+    color: white; /* Change color to white on hover */
+}
+nav a{
+    font-size: 1.8rem;
+	color:#e7c7e2;
+	margin-left: 4rem;
+	font-weight: 500;
+	transition: 0.3s ease;
+	border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav.a.active{
+	color: #ff0dc2;
+	border-bottom:3px solid #ff0dc2;
+}
+
+@media(max-width:995px){
+	nav{
+		position:absolute;
+		display: none;
+		top:0%;
+		right:0;
+		width:40%;
+		border-left:3px solid #ff0dc2;
+		border-bottom:3px solid #ff0dc2;
+		border-bottom-left-radius: 2rem;
+		padding:1rem solid;
+		background-color: #161616;
+		border-top:0.1rem solid rgba(0,0,0,0,1);
+	}
+
+nav.active{
+	display:block;
+}
+
+nav a{
+	display:block;
+	font-size:2rem;
+	margin: 3rem 0;
+}
+
+nav a:hover,
+nav a.active{
+	padding:1rem;
+	border-radius:0.5rem;
+	border-bottom:0.5rem solid #ff0dc2;
+}
+}
+		</style>
+	<header>
+		<a href="#" class="logo">Izzatulfthah</a>
+		
+		<nav>
+			<a href="index.html" class="active"> Home </a>
+			<a href="AboutMe.html" > About Me </a>
+			<a href="Project.html" > Project </a>
+			<a href="ContactMe.html" > Contact </a>
+		</nav>
+	</header>
+	<section class="home">
+	<div class="home-img">
+		<img src="img/main.jpg" alt="">
+	</div>
+	<div class="home-content">
+		<h1> HELLO, It's <span> Izzy</span></h1>
+		<h3 class="typing-text">I'm a <span></span></h3>
+		<p> Hi, I’m Izzatul Fatihah. This website is all about me relating to my skills and work/project experiences. </p>
+		<div class="social-icons">
+            <a href="https://www.tiktok.com/@izzatulfthah"><i class="fa-brands fa-tiktok"></i>
+			<a href="https://www.instagram.com/izzatulfthah"><i class="fa-brands fa-instagram"></i></a>
+			<a href="https://www.linkedin.com/in/izzatul-fatihah-5bb573349"><i class="fa-brands fa-linkedin"></i></a>
+ 
+		</div>
+		<a href="AboutMe.html"class="btn"> Know Me </a>
+</div>
+</section>
+	
+
+		<section id="skills" class="skills-section">
+			<div class="container">
+				<div class="skills-content">
+					<div class="skills-left">
+						<div class="skill-item">
+							<span class="stars">★★★★☆</span>
+							<img src="img/canva-removebg-preview.png" alt="Canva">
+						</div>
+						<div class="skill-item">
+							<span class="stars">★★★★☆</span>
+							<img src="img/capcut.jpg" alt="CapCut">
+						</div>
+						<div class="skill-item">
+							<span class="stars">★★★★★</span>
+							<img src="img/words.png" alt="Microsoft Word">
+						</div>
+						<div class="skill-item">
+							<span class="stars">★★★☆☆</span>
+							<img src="img/excel.png" alt="Microsoft Excel">
+						</div>
+						<div class="skill-item">
+							<span class="stars">★★★★☆</span>
+							<img src="img/powerpoint.png" alt="PowerPoint">
+						</div>
+					</div>
+					<div class="skills-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 20vh;">
+						<h2 style="font-family: 'Poppins';font-size: 50px; margin-bottom: 20px; margin-top: -100px;">My Skills</h2>
+						<img src="img/me7.jpg" alt="Your Picture" class="skills-image" style="margin-top: 20px;">
+						</div>
+					<div class="skills-right">
+						<div class="skill-item">
+							<span class="stars">★★★☆☆</span>
+							<img src="img/phot.jpg" alt="Adobe Photoshop">
+						</div>
+						<div class="skill-item">
+							<span class="stars">★★★★☆</span>
+							<img src="img/dreamweaver.png" alt="Adobe Dreamweaver">
+						</div>
+						<div class="skill-item">
+							<span class="stars">★★★☆☆</span>
+							<img src="img/after effect.png" alt="After Effects">
+						</div>
+						<div class="skill-item">
+							<span class="stars">★★★☆☆</span>
+							<img src="img/adobe illustrator.png" alt="Adobe Illustrator">
+						</div>
+						<div class="skill-item">
+							<span class="stars">★★★★☆</span>
+							<img src="img/ue.jpg" alt="Unreal Engine">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+<section>
+
+	<div style="font-family: 'Poppins'; font-size: 50px; text-align: center; width: 100%; color: #ff0dc2; font-weight:bold;">
+		RECENT PROJECT 
+	</div>
+	
+	<div class="wrapper">
+		<div class="container">
+			<input type="radio" name="slide" id="c1" checked>
+			<label for="c1" class="card">
+				<div class="row">
+					<div class="icon">1</div>
+					<div class="description">
+						<h4>Graphic Design</h4>
+						<p>Design Poster</p>
+					</div>
+				</div>
+			</label>
+	
+			<input type="radio" name="slide" id="c2">
+			<label for="c2" class="card">
+				<div class="row">
+					<div class="icon">2</div>
+					<div class="description">
+						<h4>Animation Content Production</h4>
+						<p>Maya Build a Room</p>
+					</div>
+				</div>
+			</label>
+	
+			<input type="radio" name="slide" id="c3">
+			<label for="c3" class="card">
+				<div class="row">
+					<div class="icon">3</div>
+					<div class="description">
+						<h4>Game Content Production</h4>
+						<p>Create merchandise for our game</p>
+					</div>
+				</div>
+			</label>
+	
+			<input type="radio" name="slide" id="c4">
+			<label for="c4" class="card">
+				<div class="row">
+					<div class="icon">4</div>
+					<div class="description">
+						<h4>Digital Photo Communication</h4>
+						<p>Take a picture based on the lecturer's given task</p>
+					</div>
+				</div>
+			</label>
+
+	 <!-- Show More Button -->
+	 <div class="show-more-container">
+        <a href="Project.html"><button id="showMoreBtn" class="show-more-btn">Show More</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById("showMoreBtn").addEventListener("click", function () {
+        var moreProjects = document.querySelector(".more-projects");
+        if (moreProjects.style.display === "none" || moreProjects.style.display === "") {
+            moreProjects.style.display = "flex";
+            this.textContent = "Show Less";
+        } else {
+            moreProjects.style.display = "none";
+            this.textContent = "Show More";
+        }
+    });
+</script>
+
+<style>
+    .show-more-container {
+        text-align: center;
+        margin-top: 350px;
+    }
+
+    .show-more-btn {
+        background: #ff0dc2;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .show-more-btn:hover {
+        background: #d40ba8;
+    }
+
+    .more-projects {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
+</style>
+</div>
+</section>
+</section>
+	<!-- Contact Section -->
+<section class="contact-section">
+    <div class="contact-container">
+        <div class="contact-text">
+			<a href="ContactMe.html">
+            <h2>Contact Me </h2>
+		</a>
+            <p>Let's connect! I'm excited to gain experience and contribute my skills. If you're looking for a passionate and hardworking intern, feel free to reach out through the platforms below:</p>
+            <div class="social-links">
+				<a href="mailto:izzatul327@gmail.com"><i class="fas fa-envelope"></i></a>
+				<a href="https://www.linkedin.com/in/izzatul-fatihah-5bb573349" target="_blank"><i class="fab fa-linkedin"></i></a>
+				<a href="https://www.instagram.com/izzatulfthah" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@izzatulfthah" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <a href="img/Resume.pdf" class="btn" download>Resume</a>
+        </div>
+        <div class="contact-image">
+            <img src="img/me12.jpg" alt="Your Image">
+        </div>
+    </div>
+	</section>
+
+<!-- FontAwesome Icons -->
+<script src="https://kit.fontawesome.com/YOUR-KIT-ID.js" crossorigin="anonymous"></script>
+
+
+
+<!-- Footer -->
+<footer class="custom-footer">
+	<p>© 2025 All Rights Reserved. Design by Izzatul Fatihah</p>
+</footer>
+</body>
+</html>
